@@ -1,6 +1,5 @@
 import Foundation
 
-struct Planet: Codable, Identifiable {
-    let id: Int
+struct Planet: Codable {
     let name: String
 }

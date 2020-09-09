@@ -11,7 +11,7 @@ struct PlanetDetailView: View {
 #if DEBUG
 struct PlanetDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PlanetDetailView(planet: Planet(id: 1, name: "Mars"))
+        PlanetDetailView(planet: Planet(name: "Mars"))
     }
 }
 #endif
