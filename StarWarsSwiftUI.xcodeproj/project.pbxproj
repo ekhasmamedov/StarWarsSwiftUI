@@ -97,6 +97,15 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		553A90ED2508B91600D43820 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				55DA299E250847470038D38B /* PlanetRowView.swift */,
+				553A90EB2508B6A100D43820 /* PlanetRowViewModel.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
 		55DA295825081DBB0038D38B = {
 			isa = PBXGroup;
 			children = (
@@ -205,10 +214,9 @@
 		55DA29A2250848590038D38B /* PlanetList */ = {
 			isa = PBXGroup;
 			children = (
+				553A90ED2508B91600D43820 /* Rows */,
 				55DA296625081DBB0038D38B /* PlanetListView.swift */,
 				55DA29A5250848E40038D38B /* PlanetListViewModel.swift */,
-				55DA299E250847470038D38B /* PlanetRowView.swift */,
-				553A90EB2508B6A100D43820 /* PlanetRowViewModel.swift */,
 			);
 			path = PlanetList;
 			sourceTree = "<group>";
