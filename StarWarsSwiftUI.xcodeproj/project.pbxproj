@@ -13,7 +13,6 @@
 		55DA296925081DBC0038D38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DA296825081DBC0038D38B /* Assets.xcassets */; };
 		55DA296C25081DBC0038D38B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DA296B25081DBC0038D38B /* Preview Assets.xcassets */; };
 		55DA297725081DBD0038D38B /* StarWarsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA297625081DBD0038D38B /* StarWarsSwiftUITests.swift */; };
-		55DA298225081DBD0038D38B /* StarWarsSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA298125081DBD0038D38B /* StarWarsSwiftUIUITests.swift */; };
 		55DA299125081F2F0038D38B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA299025081F2F0038D38B /* APIClient.swift */; };
 		55DA299325083FB90038D38B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA299225083FB90038D38B /* APIRequest.swift */; };
 		55DA299625083FFF0038D38B /* PlanetsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA299525083FFF0038D38B /* PlanetsAPI.swift */; };
@@ -53,8 +52,6 @@
 		55DA297625081DBD0038D38B /* StarWarsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsSwiftUITests.swift; sourceTree = "<group>"; };
 		55DA297825081DBD0038D38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55DA297D25081DBD0038D38B /* StarWarsSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		55DA298125081DBD0038D38B /* StarWarsSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsSwiftUIUITests.swift; sourceTree = "<group>"; };
-		55DA298325081DBD0038D38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55DA299025081F2F0038D38B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		55DA299225083FB90038D38B /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		55DA299525083FFF0038D38B /* PlanetsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsAPI.swift; sourceTree = "<group>"; };
@@ -111,7 +108,6 @@
 			children = (
 				55DA296325081DBB0038D38B /* StarWarsSwiftUI */,
 				55DA297525081DBD0038D38B /* StarWarsSwiftUITests */,
-				55DA298025081DBD0038D38B /* StarWarsSwiftUIUITests */,
 				55DA296225081DBB0038D38B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -156,15 +152,6 @@
 				55DA297825081DBD0038D38B /* Info.plist */,
 			);
 			path = StarWarsSwiftUITests;
-			sourceTree = "<group>";
-		};
-		55DA298025081DBD0038D38B /* StarWarsSwiftUIUITests */ = {
-			isa = PBXGroup;
-			children = (
-				55DA298125081DBD0038D38B /* StarWarsSwiftUIUITests.swift */,
-				55DA298325081DBD0038D38B /* Info.plist */,
-			);
-			path = StarWarsSwiftUIUITests;
 			sourceTree = "<group>";
 		};
 		55DA298F25081F1C0038D38B /* Network */ = {
@@ -384,7 +371,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55DA298225081DBD0038D38B /* StarWarsSwiftUIUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
