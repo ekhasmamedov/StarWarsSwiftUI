@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		551053FE2510742500EEE37B /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551053FD2510742500EEE37B /* DateFormatter+Ext.swift */; };
+		55105400251077B600EEE37B /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551053FF251077B600EEE37B /* Color+Ext.swift */; };
 		553A90EC2508B6A100D43820 /* PlanetRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553A90EB2508B6A100D43820 /* PlanetRowViewModel.swift */; };
 		55D7550A25103EA300CD77C3 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7550925103EA300CD77C3 /* MoviesResponse.swift */; };
 		55D7550C25103ED900CD77C3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7550B25103ED900CD77C3 /* Movie.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		551053FD2510742500EEE37B /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		551053FF251077B600EEE37B /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		553A90EB2508B6A100D43820 /* PlanetRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetRowViewModel.swift; sourceTree = "<group>"; };
 		55D7550925103EA300CD77C3 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
 		55D7550B25103ED900CD77C3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				55D7551E251052B400CD77C3 /* Int+Roman.swift */,
 				551053FD2510742500EEE37B /* DateFormatter+Ext.swift */,
+				551053FF251077B600EEE37B /* Color+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				55DA299125081F2F0038D38B /* APIClient.swift in Sources */,
 				55D7550A25103EA300CD77C3 /* MoviesResponse.swift in Sources */,
 				55D755212510548000CD77C3 /* Character.swift in Sources */,
+				55105400251077B600EEE37B /* Color+Ext.swift in Sources */,
 				553A90EC2508B6A100D43820 /* PlanetRowViewModel.swift in Sources */,
 				55DA299F250847470038D38B /* PlanetRowView.swift in Sources */,
 			);
