@@ -5,7 +5,7 @@ struct MovieDetailView: View {
 	
 	var body: some View {
 		VStack {
-			Text("\(movie.episodeText)")
+			Text("Episode \(movie.episodeNumber.toRoman())")
 				.bold()
 			Text("\(movie.title.uppercased())")
 				.bold()

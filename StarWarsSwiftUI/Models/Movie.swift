@@ -24,16 +24,9 @@ struct Movie: Codable {
 	}
 	
 	var shortDate: String {
-		let formatter = DateFormatter()
-		formatter.dateFormat = "yyyy-MM-DD"
-		guard let date = formatter.date(from: releaseDate) else {
+		guard let date = DateFormatter.shortDateFormatter.date(from: releaseDate) else {
 			return ""
 		}
-		formatter.dateStyle = .medium
-		return formatter.string(from: date)
-	}
-	
-	var episodeText: String {
-		return "Episode \(episodeNumber.toRoman())"
+		return DateFormatter.mediumDateFormatter.string(from: date)
 	}
 }
