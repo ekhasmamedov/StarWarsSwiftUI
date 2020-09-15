@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct PlanetListView: View {
-    
 	@ObservedObject var viewModel: PlanetListViewModel
 
 	init(viewModel: PlanetListViewModel = PlanetListViewModel()) {

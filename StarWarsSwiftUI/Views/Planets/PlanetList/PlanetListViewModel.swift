@@ -13,7 +13,7 @@ class PlanetListViewModel: ObservableObject, Identifiable {
 	}
 	
 	func fetchPlanets() {
-		let response: AnyPublisher<PlanetsResponse, Error> = apiClient.execute(PlanetsAPI.Planets)
+		let response: AnyPublisher<PlanetsResponse, Error> = apiClient.execute(StarWarsAPI.planets)
 		response
 			.map { $0.results.map(PlanetRowViewModel.init) }
 			.sink(receiveCompletion: { [weak self] value in
