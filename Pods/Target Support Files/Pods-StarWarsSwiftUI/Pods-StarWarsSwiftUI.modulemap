@@ -1,0 +1,6 @@
+module Pods_StarWarsSwiftUI {
+  umbrella header "Pods-StarWarsSwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

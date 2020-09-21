@@ -1,14 +1,14 @@
 import Combine
+import Resolver
 
 class MoviesListViewModel: ObservableObject, Identifiable {
-	let apiClient: APIClientType
 	
 	@Published var rowModels: [MovieRowViewModel] = []
+	@Injected private var apiClient: APIClientType
 	
 	private var disposables = Set<AnyCancellable>()
 	
-	init(apiClient: APIClientType = APIClient()) {
-		self.apiClient = apiClient
+	init() {
 		fetchMovies()
 	}
 	

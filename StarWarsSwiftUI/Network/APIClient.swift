@@ -17,10 +17,9 @@ struct APIClient: APIClientType {
 	private let baseURL: String
 	private let session: URLSession
 	
-	init(baseURL: String = API.baseURL,
-			 configuration: URLSessionConfiguration = URLSessionConfiguration.default) {
+	init(baseURL: String = API.baseURL, session: URLSession = URLSession.shared) {
 		self.baseURL = baseURL
-		self.session = URLSession(configuration: configuration)
+		self.session = session
 	}
 	
 	func execute<T: Decodable>(_ request: APIRequest) -> AnyPublisher<T, Error> {

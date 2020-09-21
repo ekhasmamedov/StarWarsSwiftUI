@@ -14,7 +14,7 @@ struct MoviesListView: View {
 					MovieRowView(viewModel: model)
 				}
 			}.navigationBarTitle("Select a movie")
-		}
+		}.accentColor(.white)
 	}
 }
 

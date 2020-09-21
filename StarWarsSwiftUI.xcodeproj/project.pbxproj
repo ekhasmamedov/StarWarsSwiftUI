@@ -34,6 +34,7 @@
 		55DA299F250847470038D38B /* PlanetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA299E250847470038D38B /* PlanetRowView.swift */; };
 		55DA29A1250847580038D38B /* PlanetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA29A0250847580038D38B /* PlanetDetailView.swift */; };
 		55DA29A6250848E40038D38B /* PlanetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA29A5250848E40038D38B /* PlanetListViewModel.swift */; };
+		FF1AFA98F9487E8413AEFE7F /* libPods-StarWarsSwiftUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6F91DE976A3EB0BAAF0561 /* libPods-StarWarsSwiftUI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A6F91DE976A3EB0BAAF0561 /* libPods-StarWarsSwiftUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarWarsSwiftUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		551053FD2510742500EEE37B /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
 		551053FF251077B600EEE37B /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		553A90EB2508B6A100D43820 /* PlanetRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetRowViewModel.swift; sourceTree = "<group>"; };
@@ -86,6 +88,8 @@
 		55DA299E250847470038D38B /* PlanetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetRowView.swift; sourceTree = "<group>"; };
 		55DA29A0250847580038D38B /* PlanetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailView.swift; sourceTree = "<group>"; };
 		55DA29A5250848E40038D38B /* PlanetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListViewModel.swift; sourceTree = "<group>"; };
+		B1260E3B6A9310DC5A793735 /* Pods-StarWarsSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-StarWarsSwiftUI/Pods-StarWarsSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		E3443D9510250BDDC7DA3FD0 /* Pods-StarWarsSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsSwiftUI/Pods-StarWarsSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1AFA98F9487E8413AEFE7F /* libPods-StarWarsSwiftUI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +188,8 @@
 				55DA296325081DBB0038D38B /* StarWarsSwiftUI */,
 				55DA297525081DBD0038D38B /* StarWarsSwiftUITests */,
 				55DA296225081DBB0038D38B /* Products */,
+				8B781A43E44B58B7681F6FBA /* Pods */,
+				FCA5FFE67ACEA65CEC852B6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,6 +302,24 @@
 			path = PlanetDetail;
 			sourceTree = "<group>";
 		};
+		8B781A43E44B58B7681F6FBA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3443D9510250BDDC7DA3FD0 /* Pods-StarWarsSwiftUI.debug.xcconfig */,
+				B1260E3B6A9310DC5A793735 /* Pods-StarWarsSwiftUI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FCA5FFE67ACEA65CEC852B6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A6F91DE976A3EB0BAAF0561 /* libPods-StarWarsSwiftUI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,6 +327,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55DA298625081DBD0038D38B /* Build configuration list for PBXNativeTarget "StarWarsSwiftUI" */;
 			buildPhases = (
+				8147463F40DBD04543F12FB7 /* [CP] Check Pods Manifest.lock */,
 				55DA295D25081DBB0038D38B /* Sources */,
 				55DA295E25081DBB0038D38B /* Frameworks */,
 				55DA295F25081DBB0038D38B /* Resources */,
@@ -418,6 +444,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8147463F40DBD04543F12FB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWarsSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55DA295D25081DBB0038D38B /* Sources */ = {
@@ -600,6 +651,7 @@
 		};
 		55DA298725081DBD0038D38B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3443D9510250BDDC7DA3FD0 /* Pods-StarWarsSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -622,6 +674,7 @@
 		};
 		55DA298825081DBD0038D38B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1260E3B6A9310DC5A793735 /* Pods-StarWarsSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
