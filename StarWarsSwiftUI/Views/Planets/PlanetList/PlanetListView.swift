@@ -13,7 +13,8 @@ struct PlanetListView: View {
 				NavigationLink(destination: PlanetDetailView(planet: model.planet)) {
 					PlanetRowView(viewModel: model)
 				}
-			}.navigationBarTitle("Select a planet")
+			}
+            .navigationBarTitle("Select a planet")
 		}
 	}
 }

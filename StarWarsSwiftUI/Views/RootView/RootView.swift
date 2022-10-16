@@ -3,7 +3,7 @@ import SwiftUI
 struct RootView: View {
 	var body: some View {
 		TabView {
-			MoviesListView()
+			MoviesListView(viewModel: MoviesListViewModel())
 				.tabItem {
 					Image("cinema").renderingMode(.template)
 					Text("Movies")

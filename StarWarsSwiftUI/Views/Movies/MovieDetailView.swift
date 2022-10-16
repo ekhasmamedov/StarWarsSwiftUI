@@ -1,28 +1,29 @@
 import SwiftUI
+import struct Kingfisher.KFImage
 
 struct MovieDetailView: View {
+	struct Constants {
+		static let textFont = Font.system(size: 20)
+	}
+	
 	var movie: Movie
 	
 	var body: some View {
 		ZStack {
 			Color.black.edgesIgnoringSafeArea(.all)
-			VStack {
-				Text("Episode \(movie.episodeNumber.toRoman())")
-					.bold()
-					.foregroundColor(Color.crawlColor)
-				Text("\(movie.title.uppercased())")
-					.bold()
-					.font(Font.system(size: 20))
-					.foregroundColor(Color.crawlColor)
-					.padding(.bottom)
-				Text("Director: \(movie.director)")
-					.foregroundColor(Color.crawlColor)
-				Text("Release Date: \(movie.shortDate)")
-					.foregroundColor(Color.crawlColor)
-					.padding(.bottom)
-				Text("\(movie.openingCrawl)")
-					.foregroundColor(Color.crawlColor)
-			}.padding()
+			ScrollView {
+				VStack {
+					Text("\(movie.title.uppercased())")
+						.bold()
+						.font(Constants.textFont)
+						.foregroundColor(Color.crawlColor)
+						.padding(.bottom)
+					KFImage(movie.movieURL)
+						.resizable()
+						.aspectRatio(contentMode: .fit)
+				}
+                .padding(20)
+			}
 		}
 	}
 }
@@ -30,7 +31,7 @@ struct MovieDetailView: View {
 #if DEBUG
 struct MovieDetailView_Previews: PreviewProvider {
 	static var previews: some View {
-		MovieDetailView(movie: Movie())
+        MovieDetailView(movie: Movie.mock)
 	}
 }
 #endif

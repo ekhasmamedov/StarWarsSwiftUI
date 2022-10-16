@@ -1,5 +1,6 @@
 import Foundation
 
-struct Character: Codable {
-	
+struct Character: Codable, Identifiable {
+    let id = UUID()
+    let name: String
 }

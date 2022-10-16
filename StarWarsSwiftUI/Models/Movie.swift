@@ -1,32 +1,33 @@
 import Foundation
 
-struct Movie: Codable {
+struct Movie: Codable, Identifiable {
+    let id = UUID()
 	let title: String
-	let director: String
-	let openingCrawl: String
-	let releaseDate: String
-	let episodeNumber: Int
+	let year: String
+	let imdbID: String
+	let type: String
+	let imageURL: String
 	
 	enum CodingKeys: String, CodingKey {
-		case title
-		case director
-		case openingCrawl = "opening_crawl"
-		case releaseDate = "release_date"
-		case episodeNumber = "episode_id"
+		case title = "Title"
+		case year = "Year"
+		case imdbID
+		case type = "Type"
+		case imageURL = "Poster"
 	}
 	
-	init() {
-		title = "A New Hope"
-		director = "George Lucas"
-		openingCrawl = "Long text long text long text long text long text long text long text long text"
-		releaseDate = "1977-05-25"
-		episodeNumber = 4
+	var movieURL: URL? {
+		return URL(string: imageURL)
 	}
-	
-	var shortDate: String {
-		guard let date = DateFormatter.shortDateFormatter.date(from: releaseDate) else {
-			return ""
-		}
-		return DateFormatter.mediumDateFormatter.string(from: date)
-	}
+}
+
+extension Movie {
+    static var mock: Movie {
+        return Movie(
+            title: "Star Wars: Episode V - The Empire Strikes Back",
+            year: "1977",
+            imdbID: "1",
+            type: "Movie",
+            imageURL: "")
+    }
 }

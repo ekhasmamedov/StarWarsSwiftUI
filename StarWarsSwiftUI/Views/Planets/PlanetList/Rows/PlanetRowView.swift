@@ -15,7 +15,7 @@ struct PlanetRowView: View {
 #if DEBUG
 struct PlanetRowView_Previews: PreviewProvider {
 	static var previews: some View {
-		PlanetRowView(viewModel: PlanetRowViewModel(planet: Planet()))
+        PlanetRowView(viewModel: PlanetRowViewModel(planet: Planet.mock))
 	}
 }
 #endif

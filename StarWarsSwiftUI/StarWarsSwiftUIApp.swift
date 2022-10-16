@@ -3,13 +3,13 @@ import Resolver
 
 class AppDelegate: NSObject, UIApplicationDelegate {
 	func application(_ application: UIApplication,
-									 didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 		setupResolverRegistrations()
 		return true
 	}
 	
 	func setupResolverRegistrations() {
-		Resolver.register { APIClient() as APIClientType }
+		Resolver.register { StarWarsService() as StarWarsServiceType }
 	}
 }
 

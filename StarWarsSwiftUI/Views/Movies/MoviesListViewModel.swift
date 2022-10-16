@@ -1,33 +1,19 @@
 import Combine
 import Resolver
 
-class MoviesListViewModel: ObservableObject, Identifiable {
-	
-	@Published var rowModels: [MovieRowViewModel] = []
-	@Injected private var apiClient: APIClientType
-	
-	private var disposables = Set<AnyCancellable>()
-	
-	init() {
-		fetchMovies()
-	}
-	
-	func fetchMovies() {
-		let response: AnyPublisher<MoviesResponse, Error> = apiClient.execute(StarWarsAPI.movies)
-		response
-			.map { $0.results.map(MovieRowViewModel.init) }
-			.sink(receiveCompletion: { [weak self] value in
-				guard let self = self else { return }
-				switch value {
-				case .failure:
-					self.rowModels = []
-				case .finished:
-					break
-				}
-			}, receiveValue: { [weak self] planets in
-				guard let self = self else { return }
-				self.rowModels = planets
-			})
-			.store(in: &disposables)
-	}
+@MainActor
+class MoviesListViewModel: ObservableObject {
+    @Published var rowModels: [Movie] = []
+    @Injected private var service: StarWarsServiceType
+
+    func fetchMovies() async {
+        let result = await service.getAllMovies()
+        switch result {
+        case .success(let movieResponse):
+            rowModels = movieResponse.results
+        case .failure(let error):
+            print(error.localizedDescription)
+            rowModels = []
+        }
+    }
 }

@@ -1,6 +1,9 @@
 import Foundation
 
 struct MoviesResponse: Codable {
-	let count: Int
 	let results: [Movie]
+	
+	enum CodingKeys: String, CodingKey {
+		case results = "Search"
+	}
 }

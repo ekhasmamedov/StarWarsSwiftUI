@@ -3,23 +3,24 @@ import SwiftUI
 struct MoviesListView: View {
 	@ObservedObject var viewModel: MoviesListViewModel
 
-	init(viewModel: MoviesListViewModel = MoviesListViewModel()) {
-		self.viewModel = viewModel
-	}
-
 	var body: some View {
 		NavigationView {
 			List(viewModel.rowModels) { model in
-				NavigationLink(destination: MovieDetailView(movie: model.movie)) {
-					MovieRowView(viewModel: model)
+				NavigationLink(destination: MovieDetailView(movie: model)) {
+                    MovieRowView(movie: model)
 				}
-			}.navigationBarTitle("Select a movie")
-		}.accentColor(.white)
+			}
+            .navigationBarTitle("Select a movie")
+		}
+        .accentColor(.white)
+        .task {
+            await viewModel.fetchMovies()
+        }
 	}
 }
 
 struct MoviesListView_Previews: PreviewProvider {
 	static var previews: some View {
-		MoviesListView()
+		MoviesListView(viewModel: MoviesListViewModel())
 	}
 }

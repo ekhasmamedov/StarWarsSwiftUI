@@ -1,21 +1,25 @@
 import SwiftUI
+import struct Kingfisher.KFImage
 
 struct MovieRowView: View {
-	private let viewModel: MovieRowViewModel
-	
-	init(viewModel: MovieRowViewModel) {
-		self.viewModel = viewModel
-	}
+	let movie: Movie
 	
 	var body: some View {
-		Text("\(viewModel.movie.title)")
+		HStack {
+			KFImage(movie.movieURL)
+				.resizable()
+				.aspectRatio(contentMode: .fit)
+			Text("\(movie.title)")
+				.lineLimit(nil)
+		}
+        .frame(height: 48)
 	}
 }
 
 #if DEBUG
 struct MovieRowView_Previews: PreviewProvider {
 	static var previews: some View {
-		MovieRowView(viewModel: MovieRowViewModel(movie: Movie()))
+        MovieRowView(movie: Movie.mock)
 	}
 }
 #endif
